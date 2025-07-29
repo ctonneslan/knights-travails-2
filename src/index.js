@@ -84,5 +84,7 @@ export function showPath() {
   }
 }
 
-window.showPath = showPath;
-createBoard();
+document.addEventListener("DOMContentLoaded", () => {
+  createBoard();
+  window.showPath = showPath;
+});

@@ -6,9 +6,14 @@
     <title>Knight Moves</title>
 </head>
 <body>
-    <div id="board"></div>
-    <input type="text" id="start" placeholder="e2">
-    <input type="text" id="end" placeholder="g4">
-    <button onclick="showPath()">Show Knight's Path</button>
+    <div class="container">
+      <h1>Knight's Shortest Path</h1>
+      <div class="controls">
+        <input id="start" placeholder="Start (e.g. a1)" />
+        <input id="end" placeholder="End (e.g. h8)" />
+        <button onclick="showPath()">Show Path</button>
+      </div>
+      <div id="board"></div>
+    </div>
 </body>
 </html>

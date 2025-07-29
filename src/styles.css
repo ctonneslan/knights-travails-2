@@ -1,30 +1,101 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background-color: #121212;
+  color: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Heading */
+.container h1 {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+/* Controls Section */
+.controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.controls input,
+.controls button {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+.controls input {
+  background-color: #1f1f1f;
+  color: #f4f4f4;
+  border: 1px solid #333;
+}
+
+.controls button {
+  background-color: #2196f3;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #1976d2;
+}
+
+/* Chessboard */
 #board {
   display: grid;
   grid-template-columns: repeat(8, 60px);
   grid-template-rows: repeat(8, 60px);
-  width: 480px;
-  height: 480px;
-  border: 2px solid black;
+  border: 2px solid #555;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
+/* Squares */
 .square {
   width: 60px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1rem;
   font-weight: bold;
 }
 
+/* Light and Dark Squares */
 .light {
-  background-color: #eee;
+  background-color: #eeeeee;
+  color: #000;
 }
 
 .dark {
   background-color: #444;
-  color: white;
+  color: #fff;
 }
 
+/* Highlighted Path */
 .path {
-  background-color: gold !important;
+  background-color: #2196f3 !important;
+  color: #fff;
 }
